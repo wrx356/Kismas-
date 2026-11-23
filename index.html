@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="meta-title">HolidayWorld USA | American Holidays, Recipes, Decor & Countdowns</title>
+  <meta id="meta-desc" name="description" content="Explore major United States holidays including Christmas, Halloween, Thanksgiving, 4th of July, and more. Find countdowns, history, recipes, decor ideas, gift guides, and free HD wallpapers." />
+  <meta name="keywords" content="USA Holidays, Christmas, Halloween, Thanksgiving, Independence Day, Easter, Valentines Day, New Years Day, Memorial Day, Labor Day, St Patricks Day, Holiday Recipes, Holiday Wallpapers" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://holidayworldusa.com/" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="HolidayWorld USA | Your Ultimate Guide to American Celebrations" />
+  <meta property="og:description" content="Countdowns, authentic recipes, DIY decor, gift guides, and free downloadable wallpapers for all 10 major US holidays." />
+  <meta property="og:site_name" content="HolidayWorld USA" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google AdSense Script Placeholder (Replace ca-pub-XXXXXXXXXXXXXXXX with your Publisher ID) -->
+  <!--
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  -->
+
+  <!-- Monetag Verification / Tag Placeholder -->
+  <!-- <meta name="monetag" content="YOUR_MONETAG_VERIFICATION_CODE" /> -->
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json" id="schema-markup">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "HolidayWorld USA",
+    "url": "https://holidayworldusa.com/",
+    "description": "Comprehensive American holiday guide featuring countdown timers, recipes, decoration ideas, gift guides, history, and free wallpapers.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://holidayworldusa.com/#search={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Top Announcement / Live Next Holiday Ticker -->
+  <div class="top-ticker">
+    <div class="container ticker-inner">
+      <span id="next-holiday-ticker">Loading upcoming US holiday countdown...</span>
+      <div class="top-links">
+        <a href="#about" onclick="navigate('about')">About</a>
+        <a href="#wallpapers" onclick="navigate('wallpapers')">Free Wallpapers</a>
+        <a href="#contact" onclick="navigate('contact')">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header & Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand-logo" onclick="navigate('home')">
+        <span class="logo-icon">★</span>
+        <div class="logo-text">
+          <span class="brand-name">HolidayWorld</span>
+          <span class="brand-badge">USA</span>
+        </div>
+      </a>
+
+      <!-- Search Bar -->
+      <form class="header-search" id="search-form" onsubmit="handleSearch(event)">
+        <input type="search" id="search-input" placeholder="Search 100+ recipes, decor, gifts, history..." aria-label="Search holiday articles" />
+        <button type="submit" aria-label="Search">Search</button>
+      </form>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- 10 Holiday Categories Navigation -->
+    <nav class="category-nav" id="category-nav" aria-label="Holiday Categories">
+      <div class="container">
+        <ul class="nav-list" id="nav-category-list">
+          <li><a href="#home" data-route="home" class="active" onclick="navigate('home')">Home</a></li>
+          <!-- Populated dynamically via JS for all 10 holidays -->
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- TOP LEADERBOARD AD SLOT (Clearly separated from content) -->
+  <aside class="ad-wrapper container" aria-label="Advertisement">
+    <span class="ad-label">Advertisement</span>
+    <div class="ad-slot ad-leaderboard" id="ad-top-banner">
+      <!-- Insert Google AdSense 728x90 / Responsive Display Unit or Monetag Banner Here -->
+      <div class="ad-placeholder-box">
+        <span>AdSense / Monetag Responsive Header Slot (728×90)</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN DYNAMIC VIEWPORT -->
+  <main id="app-root">
+    <!-- Content dynamically rendered by app.js based on route -->
+  </main>
+
+  <!-- BOTTOM IN-FEED AD SLOT -->
+  <aside class="ad-wrapper container" aria-label="Advertisement">
+    <span class="ad-label">Advertisement</span>
+    <div class="ad-slot ad-leaderboard" id="ad-bottom-banner">
+      <!-- Insert Google AdSense Responsive Multiplex / Footer Unit or Monetag Tag Here -->
+      <div class="ad-placeholder-box">
+        <span>AdSense / Monetag Responsive Footer Slot</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="#home" class="brand-logo footer-logo" onclick="navigate('home')">
+          <span class="logo-icon">★</span>
+          <div class="logo-text">
+            <span class="brand-name">HolidayWorld</span>
+            <span class="brand-badge">USA</span>
+          </div>
+        </a>
+        <p class="footer-desc">
+          Celebrating American traditions year-round. Your trusted source for accurate US holiday countdowns, tested recipes, home decor inspiration, gift guides, and free HD wallpapers.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Major US Holidays</h4>
+        <ul class="footer-links" id="footer-holidays-1"></ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>More Celebrations</h4>
+        <ul class="footer-links" id="footer-holidays-2"></ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore & Info</h4>
+        <ul class="footer-links">
+          <li><a href="#wallpapers" onclick="navigate('wallpapers')">Free Holiday Wallpapers</a></li>
+          <li><a href="#about" onclick="navigate('about')">About HolidayWorld USA</a></li>
+          <li><a href="#contact" onclick="navigate('contact')">Contact Us</a></li>
+          <li><a href="#privacy" onclick="navigate('privacy')">Privacy & Ad Disclosure</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; <span id="current-year">2026</span> HolidayWorld USA. All rights reserved. Designed for United States holiday enthusiasts.</p>
+        <p class="disclosure-note">Independent editorial guide. Ad slots are clearly labeled to support free content.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification for Social Share / Copy -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
